@@ -1,0 +1,228 @@
+@import './animations.css';
+@import './navigation.css';
+@import './particles.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+body{
+    background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 4rem;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+}
+.header{
+    text-shadow: 1px 1px 2px #000000;
+    margin-top: 5rem;
+    font-size: 2.5rem;
+}
+.subheader{
+    text-shadow: 1px 1px 2px black;
+    font-size: 2rem;
+    margin: 1rem;
+}
+.paragraph{
+    text-shadow: 1px 1px 2px black;
+    font-size: 1.5rem;
+}
+.link-to-projects{
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+    font-size: 1.3rem;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.226);
+    max-width: auto;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+.link-to-projects:hover{
+    background: rgba(255, 0, 76, 0.226);
+}
+
+
+@media (max-width:650px){
+    .subheader{
+        font-size: 1.5rem;
+    }
+      
+}
+
+.full{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+.grid-elem{
+    background-color: white;
+    min-height: 15rem;
+    box-shadow: 1px 1px 3px rgb(189, 185, 185);
+    border-radius: 7px;
+    margin-top: 0.5rem;
+    position: relative;
+}
+.about-header,
+.skills-header,
+.projects-header{
+    background-color: thistle;
+    color: black;
+    padding: 1rem;
+    border-radius: 7px 7px 0px 0px;
+}
+
+
+.about,
+.skills,
+.projects{
+    background:rgba(255, 255, 255, 0.411);
+    position: relative;
+}
+
+.skills-header{
+    background-color: #fbc8d4;
+}
+
+.projects-header{
+    background-color:#fbc8d4;
+}
+.about-paragraph,
+.skills-paragraph,
+.projects-paragraph{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    padding: 1rem;
+}
+.about-image,
+.skills-image,
+.projects-image{
+    max-width: 10rem;
+    min-width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+}
+
+#projects .grid{
+    grid-template-columns: repeat(2, 25rem);
+}
+
+.skills-image{
+    filter: opacity(30%);
+    transition: all 0.5s;
+}
+.grid-elem:hover .skills-image{
+    filter: none;
+}
+
+
+@media (max-width:1370px){
+    .grid{
+        grid-template-columns: repeat(2, 25rem);
+    }
+      
+}
+@media (max-width:1100px){
+    .skills-image{
+        filter: none;
+    } 
+}
+
+
+@media (max-width:450px){
+    .grid{
+        grid-template-columns: 18rem;
+    }
+    #projects .grid{
+        grid-template-columns: 18rem;
+    }
+    .skills-image{
+        filter: none;
+    }      
+}
+
+footer{
+    background: rgba(255, 192, 203, 0.288);
+}
+.copyright{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.quote{
+    color: white;
+    font-size: 2rem;
+    padding: 4.5rem;
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.contact-image{
+    max-width: 2rem;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+
+.contact-info{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.white{
+    background: white;
+}
+
+.contact-image:hover{
+    filter: none;
+}
+
+@media (max-width:850px){
+    .grid{
+        grid-template-columns: 25rem;
+    }
+    #projects .grid{
+        grid-template-columns: 25rem;
+    }
+    .skills-image{
+        filter: none;
+    }
+    .contact-image{
+        filter: none;
+    }
+      
+}
