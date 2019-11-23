@@ -45,7 +45,7 @@ body{
     border-radius: 2px;
     background: rgba(0, 0, 0, 0.226);
     max-width: auto;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     cursor: pointer;
     color: #ffffff;
     transition: all 0.5s;
@@ -77,14 +77,16 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 20rem);
     justify-content: center;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
 }
 .grid-elem{
     background-color: white;
     min-height: 15rem;
+    max-width: 90vw;
     box-shadow: 1px 1px 3px rgb(189, 185, 185);
     border-radius: 7px;
+    margin: 0 auto;
     margin-top: 0.5rem;
     position: relative;
 }
@@ -143,6 +145,15 @@ body{
 }
 
 
+
+.projects-link{
+    background: black;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 0px 0px 2px 2px;
+}
+
+
 @media (max-width:1370px){
     .grid{
         grid-template-columns: repeat(2, 25rem);
@@ -170,6 +181,7 @@ body{
 
 footer{
     background: rgba(255, 192, 203, 0.288);
+    text-align: center;
 }
 .copyright{
     padding: 1rem;
@@ -224,5 +236,20 @@ footer{
     .contact-image{
         filter: none;
     }
+    .quote{
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
       
+}
+
+.flexible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.wider{
+    width: 100%;
 }
