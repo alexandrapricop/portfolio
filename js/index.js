@@ -71,7 +71,7 @@ contactLink.addEventListener("click", () => {
 })
 projectsButton.addEventListener("click", () => {
     window.scrollTo({ 
-        top: window.pageYOffset + projectsSection.getBoundingClientRect().top, 
+        top: window.pageYOffset + aboutSection.getBoundingClientRect().top, 
         behavior: 'smooth' 
     });
 })

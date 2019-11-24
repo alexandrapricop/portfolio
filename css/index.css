@@ -10,9 +10,12 @@
 }
 
 body{
+    /*
     background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
+    */
+    background-color: #0c0032;
 }
 .container{
     min-height: 100vh;
@@ -25,33 +28,46 @@ body{
     font-family: 'Maven Pro', sans-serif;
 }
 .header{
-    text-shadow: 1px 1px 2px #000000;
+
     margin-top: 5rem;
     font-size: 2.5rem;
 }
 .subheader{
-    text-shadow: 1px 1px 2px black;
+
     font-size: 2rem;
     margin: 1rem;
 }
 .paragraph{
-    text-shadow: 1px 1px 2px black;
+
     font-size: 1.5rem;
 }
 .link-to-projects{
     margin-top: 2rem;
-    margin-bottom: 7rem;
     font-size: 1.3rem;
-    border-radius: 2px;
-    background: rgba(0, 0, 0, 0.226);
-    max-width: auto;
-    padding: 1rem 1rem;
     cursor: pointer;
     color: #ffffff;
-    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
-.link-to-projects:hover{
-    background: rgba(255, 0, 76, 0.226);
+.projects-button-img{
+    max-height: 10rem;
+    animation-name: play;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-duration: 0.9s;
+}
+
+@keyframes play{
+    0%{
+        transform: translateY(0px) ;
+    }
+    50%{
+        transform: translateY(1.5rem) ;
+    }
+    100%{
+        transform: translateY(0px) ;
+    }
 }
 
 
@@ -81,20 +97,21 @@ body{
     gap: 1rem;
 }
 .grid-elem{
-    background-color: white;
+    background: black;
     min-height: 15rem;
     max-width: 90vw;
-    box-shadow: 1px 1px 3px rgb(189, 185, 185);
     border-radius: 7px;
     margin: 0 auto;
     margin-top: 0.5rem;
     position: relative;
+    box-shadow: 0px 0px 5px 2px #190061;
 }
+
 .about-header,
 .skills-header,
 .projects-header{
-    background-color: thistle;
-    color: black;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 1rem;
     border-radius: 7px 7px 0px 0px;
 }
@@ -103,24 +120,17 @@ body{
 .about,
 .skills,
 .projects{
-    background:rgba(255, 255, 255, 0.411);
+    background:#000000;
     position: relative;
 }
 
-.skills-header{
-    background-color: #fbc8d4;
-}
-
-.projects-header{
-    background-color:#fbc8d4;
-}
 .about-paragraph,
 .skills-paragraph,
 .projects-paragraph{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 1rem;
 }
 .about-image,
@@ -137,7 +147,7 @@ body{
 }
 
 .skills-image{
-    filter: opacity(30%);
+    /* filter: opacity(30%); */
     transition: all 0.5s;
 }
 .grid-elem:hover .skills-image{
@@ -147,10 +157,11 @@ body{
 
 
 .projects-link{
-    background: black;
+    background: #00000000;
     padding: 1rem;
     text-decoration: none;
-    border-radius: 0px 0px 2px 2px;
+    border-radius: 0px 0px 7px 7px;
+    box-shadow: 0px 0px 5px 2px #190061;
 }
 
 
@@ -180,30 +191,26 @@ body{
 }
 
 footer{
-    background: rgba(255, 192, 203, 0.288);
+    background: #190061;
     text-align: center;
-}
-.copyright{
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    font-family: 'Maven Pro', sans-serif;
 }
 
 .quote{
     color: white;
     font-size: 2rem;
     padding: 4.5rem;
+    box-sizing: border-box;
     line-height: 1.5;
     text-align: center;
     font-family: 'Maven Pro', sans-serif;
+    box-shadow: 0px 0px 5px 2px #190061;
+    margin: 2rem;
+    background-color: black;
 }
 
 .contact-image{
     max-width: 2rem;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transition: all 0.5s;
 }
 
@@ -214,11 +221,6 @@ footer{
     padding: 1rem;
     justify-content: space-around;
 }
-
-.white{
-    background: white;
-}
-
 .contact-image:hover{
     filter: none;
 }
